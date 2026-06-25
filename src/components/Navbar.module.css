@@ -1,0 +1,33 @@
+.menuBtn {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--color-ink);
+  padding: 4px;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 24px 22px;
+  gap: 16px;
+  z-index: 30;
+  box-shadow: 0 12px 24px rgba(20, 40, 36, 0.08);
+}
+
+@media (max-width: 680px) {
+  :global(.a-nav) .desktopLinks {
+    display: none;
+  }
+
+  .menuBtn {
+    display: inline-flex;
+  }
+}
