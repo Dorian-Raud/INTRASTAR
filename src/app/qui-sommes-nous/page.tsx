@@ -37,7 +37,7 @@ export default function QuiSommesNous() {
             <h2 className="a-prose-h">Notre histoire</h2>
             <p className="a-prose">
               Après plus de cinq années passées au cœur des déclarations d&apos;échanges de biens, au
-              service d&apos;entreprises industrielles et de cabinets, le constat était simple :
+              service d&apos;entreprises industrielles et de cabinets comptables, le constat était simple :
               l&apos;EMEBI reste une obligation chronophage et mal maîtrisée, source d&apos;erreurs et
               de stress chaque mois.
             </p>

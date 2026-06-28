@@ -759,7 +759,16 @@ button {
     padding-right: 24px;
   }
 
-  .a-hero,
+  .a-hero {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    display: block;
+  }
+
+  .a-hero-img {
+    display: none;
+  }
+
   .a-band-grid,
   .a-about,
   .a-split,
@@ -800,5 +809,40 @@ button {
 
   .a-foot-bottom {
     flex-direction: column;
+  }
+
+  /* Titres : centrés sur mobile */
+  .a-eyebrow {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .a-eyebrow2,
+  .a-band-tag {
+    text-align: center;
+  }
+
+  .a-h1,
+  .a-h2,
+  .a-ph-h1,
+  .a-band-title,
+  .a-prose-h {
+    text-align: center;
+  }
+
+  .a-herobtns {
+    justify-content: center;
+  }
+
+  /* Corps de texte : justifié sur mobile (pas les cartes) */
+  .a-lead,
+  .a-secsub,
+  .a-band-text,
+  .a-prose,
+  .a-ph-sub,
+  .a-step-t {
+    text-align: justify;
   }
 }

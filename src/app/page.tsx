@@ -60,7 +60,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Placeholder label="photo — équipe / bureau (4:3)" className="a-hero-img" />
+        <img src="/office.png" alt="photo — équipe / bureau (4:3)" className="a-hero-img" />
       </section>
 
       <section className="a-band">
@@ -69,8 +69,9 @@ export default function Home() {
             <div className="a-band-tag">Notre domaine d&apos;expertise</div>
             <h2 className="a-band-title">L&apos;EMEBI, anciennement DEB, sans le casse-tête.</h2>
             <p className="a-band-text">
-              Depuis 2022, l&apos;Enquête Mensuelle sur les Échanges de Biens encadre vos flux de
-              marchandises au sein de l&apos;Union européenne. Nous prenons en charge l&apos;intégralité
+              Depuis janvier 2022, les modalités de déclaration des échanges de biens à l’introduction et à l’expédition au sein de l’Union européenne ont évolué. 
+              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (EMEBI) a remplacé le volet statistique de la déclaration d’échanges de biens (DEB) pour les échanges intra-UE de marchandises. 
+              Nous prenons en charge l&apos;intégralité
               de la démarche pour que vous restiez concentré sur votre activité.
             </p>
           </div>
