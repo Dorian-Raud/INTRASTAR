@@ -30,8 +30,8 @@ export default function Footer() {
           <a className="a-foot-link" href="mailto:intrastar.contact@gmail.com">
             intrastar.contact@gmail.com
           </a>
-          <a className="a-foot-link" href="tel:0123456789">
-            01 23 45 67 89
+          <a className="a-foot-link" href="tel:0763727879">
+            07 63 72 78 79
           </a>
           <span className="a-foot-link">France entière · à distance</span>
         </div>

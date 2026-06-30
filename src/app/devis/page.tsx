@@ -49,7 +49,7 @@ export default function Devis() {
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">☎</div>
-              01 23 45 67 89
+              07 63 72 78 79
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">⌖</div>
