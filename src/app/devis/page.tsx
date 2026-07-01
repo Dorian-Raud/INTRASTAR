@@ -44,12 +44,12 @@ export default function Devis() {
           <div className="a-contactcard">
             <p className="a-cc-h">Préférez un échange direct ?</p>
             <div className="a-cc-row">
-              <div className="a-cc-ic">✉</div>
-              intrastar.contact@gmail.com
+              <div className="a-cc-ic" >✉</div >
+              <a href="mailto:contact@intrastar.fr">contact@intrastar.fr</a>
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">☎</div>
-              07 63 72 78 79
+              <a href="tel:0763727879">07 63 72 78 79</a>
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">⌖</div>

@@ -27,8 +27,8 @@ export default function Footer() {
         </div>
         <div>
           <p className="a-foot-h">Contact</p>
-          <a className="a-foot-link" href="mailto:intrastar.contact@gmail.com">
-            intrastar.contact@gmail.com
+          <a className="a-foot-link" href="mailto:contact@intrastar.fr">
+            contact@intrastar.fr
           </a>
           <a className="a-foot-link" href="tel:0763727879">
             07 63 72 78 79

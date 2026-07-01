@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-const RECIPIENT = "intrastar.contact@gmail.com";
+const RECIPIENT = "contact@intrastar.fr";
 
 export default function DevisForm() {
   const [fullName, setFullName] = useState("");
