@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="a-foot-bottom">
-        <span>© 2026 Votre Marque · SIREN 000 000 000</span>
+        <span>© 2026 - Intrastar</span>
         <span>Mentions légales · Confidentialité</span>
       </div>
     </footer>

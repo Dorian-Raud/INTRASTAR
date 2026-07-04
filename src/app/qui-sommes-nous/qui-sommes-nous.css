@@ -1,0 +1,79 @@
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+/* Première partie */
+
+.about-top {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.about-text h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #0f172a;
+}
+
+.about-text p {
+    margin-bottom: 22px;
+    line-height: 1.9;
+    font-size: 1.08rem;
+    color: #4b5563;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-about {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Deuxième partie */
+
+.about-mission {
+    max-width: 850px;
+    text-align: left;
+}
+
+.about-mission h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #0f172a;
+}
+
+.about-mission p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+
+    .about-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .portrait-about {
+        max-width: 300px;
+    }
+
+    .about-page {
+        padding: 60px 20px;
+    }
+
+}

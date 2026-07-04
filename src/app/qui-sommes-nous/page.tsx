@@ -1,8 +1,8 @@
 import { Users, ShieldCheck, Zap } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import Placeholder from "@/components/Placeholder";
 import StatsSection from "@/components/StatsSection";
 import CtaBand from "@/components/CtaBand";
+import "./qui-sommes-nous.css";
 
 const values = [
   {
@@ -31,32 +31,44 @@ export default function QuiSommesNous() {
         sub="Intrastar est dédié à la déclaration EMEBI et aux obligations fiscales associées, pensée pour les entreprises qui veulent déléguer en confiance."
       />
 
-      <section className="a-sec">
-        <div className="a-split">
-          <div>
-            <h2 className="a-prose-h">Notre histoire</h2>
-            <p className="a-prose">
-              Après plus de cinq années passées au cœur des déclarations d&apos;échanges de biens, au
-              service d&apos;entreprises industrielles et de cabinets comptables, le constat était simple :
-              l&apos;EMEBI reste une obligation chronophage et mal maîtrisée, source d&apos;erreurs et
-              de stress chaque mois.
+      <section className="about-page">
+        <div className="about-top">
+          <div className="about-text">
+            <h2>Notre histoire</h2>
+            <p>
+              Après plus de cinq années passées au cœur des déclarations
+              d'échanges de biens, au service d'entreprises industrielles
+              et de cabinets comptables, le constat était simple :
+              l'EMEBI reste une obligation chronophage et mal maîtrisée,
+              source d'erreurs et de stress chaque mois.
             </p>
-            <p className="a-prose">
-              Nous avons créé cette structure pour en faire l&apos;inverse : une démarche fluide,
-              fiable et déléguée, où vous gardez la visibilité sans la charge. Un seul interlocuteur,
+            <p>
+              Nous avons créé cette structure pour en faire l'inverse :
+              une démarche fluide, fiable et déléguée, où vous gardez
+              la visibilité sans la charge. Un seul interlocuteur,
               qui connaît vos flux et anticipe les échéances.
             </p>
-            <h2 className="a-prose-h" style={{ marginTop: 34 }}>
-              Notre mission
-            </h2>
-            <p className="a-prose">
-              Vous garantir une conformité totale sur vos déclarations EMEBI — Introduction et
-              Expédition — et votre état récapitulatif TVA, avec des délais courts et une relation de
-              proximité. Pour que la réglementation intra-UE ne soit plus jamais un frein à votre
-              activité.
-            </p>
           </div>
-          <Placeholder label="photo — portrait fondateur (3:4)" className="a-portrait" />
+          <div className="about-image">
+            <img
+              className="portrait-about"
+              src="/DSCF0074.jpg"
+              alt="Photo du fondateur"
+            />
+          </div>
+        </div>
+        <div className="about-mission">
+          <h2>Notre mission</h2>
+          <p>
+            Vous garantir une conformité totale sur vos déclarations EMEBI —
+            Introduction et Expédition — ainsi que votre état récapitulatif TVA,
+            avec des délais courts et une relation de proximité.
+          </p>
+          <p>
+            Notre objectif est simple : vous permettre de vous concentrer sur
+            votre activité pendant que nous assurons la conformité de vos
+            obligations déclaratives.
+          </p>
         </div>
       </section>
 

@@ -429,7 +429,7 @@ button {
 
 .a-about-img {
   height: 340px;
-  border-radius: 16px;
+  border-radius: 15px;
 }
 
 /* CTA band */
@@ -743,6 +743,7 @@ button {
 
 /* Responsive */
 @media (max-width: 980px) {
+
   .a-nav,
   .a-hero,
   .a-trust,
@@ -845,4 +846,17 @@ button {
   .a-step-t {
     text-align: justify;
   }
+
+  .a-about-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    /* Bascule en mode PORTRAIT parfait pour DSCF0082.jpg */
+    max-width: 400px;
+    /* Évite que l'image ne devienne trop grande sur tablette */
+    margin: 0 auto 16px;
+    /* Centre l'image et ajoute de l'espace avec le texte en dessous */
+    display: block;
+  }
+
 }

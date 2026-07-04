@@ -69,8 +69,8 @@ export default function Home() {
             <div className="a-band-tag">Notre domaine d&apos;expertise</div>
             <h2 className="a-band-title">L&apos;EMEBI, anciennement DEB, sans le casse-tête.</h2>
             <p className="a-band-text">
-              Depuis janvier 2022, les modalités de déclaration des échanges de biens à l’introduction et à l’expédition au sein de l’Union européenne ont évolué. 
-              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (EMEBI) a remplacé le volet statistique de la déclaration d’échanges de biens (DEB) pour les échanges intra-UE de marchandises. 
+              Depuis janvier 2022, les modalités de déclaration des échanges de biens à l’introduction et à l’expédition au sein de l’Union européenne ont évolué.
+              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (EMEBI) a remplacé le volet statistique de la déclaration d’échanges de biens (DEB) pour les échanges intra-UE de marchandises.
               Nous prenons en charge l&apos;intégralité
               de la démarche pour que vous restiez concentré sur votre activité.
             </p>
@@ -118,12 +118,23 @@ export default function Home() {
       />
 
       <section className="a-about">
-        <Placeholder label="photo — portrait (3:4)" className="a-about-img" />
+        {/* Gestion adaptative de l'image (Desktop vs Mobile) */}
+        <picture className="a-about-img-container">
+          {/* Si l'écran fait 980px ou moins, on affiche l'image portrait */}
+          <source srcSet="/DSCF0082.jpg" media="(max-width: 980px)" />
+          {/* Par défaut (Desktop), on affiche l'image paysage originale */}
+          <img
+            src="/DSCF0118.jpg"
+            alt="Portrait - Qui sommes-nous"
+            className="a-about-img"
+          />
+        </picture>
+
         <div>
           <div className="a-eyebrow2">Qui sommes-nous</div>
           <h2 className="a-h2">Un interlocuteur unique, expert et réactif</h2>
           <p className="a-secsub">
-            Forte de plus de cinq années d&apos;expérience dans la déclaration des échanges de biens,
+            Forte de plus de plus de cinq années d&apos;expérience dans la déclaration des échanges de biens,
             notre micro-entreprise accompagne PME, services logistiques et cabinets comptables. Notre
             promesse : un suivi personnalisé, des délais courts et une conformité sans faille — à un
             tarif clair et maîtrisé.
