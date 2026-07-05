@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import DevisForm from "@/components/DevisForm";
+
+export const metadata: Metadata = {
+  title: "Demander un devis EMEBI gratuit — réponse sous 48 h",
+  description:
+    "Recevez une estimation claire sous 48 heures pour l'externalisation de votre déclaration EMEBI et de votre état récapitulatif TVA. Sans engagement.",
+  alternates: { canonical: "/devis" },
+};
 
 const steps = [
   {

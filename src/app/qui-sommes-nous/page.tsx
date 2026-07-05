@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import { Users, ShieldCheck, Zap } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import StatsSection from "@/components/StatsSection";
 import CtaBand from "@/components/CtaBand";
 import "./qui-sommes-nous.css";
+
+export const metadata: Metadata = {
+  title: "Qui sommes-nous — expert EMEBI & échanges intra-UE",
+  description:
+    "Intrastar, micro-entreprise spécialisée dans la déclaration EMEBI (ex-DEB) et l'état récapitulatif TVA. Plus de 5 ans d'expertise au service des PME, cabinets comptables et services logistiques.",
+  alternates: { canonical: "/qui-sommes-nous" },
+};
 
 const values = [
   {

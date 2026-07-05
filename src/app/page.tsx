@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Placeholder from "@/components/Placeholder";
 import StatsSection from "@/components/StatsSection";
 import CtaBand from "@/components/CtaBand";
 
@@ -47,8 +46,8 @@ export default function Home() {
           <div className="a-eyebrow">EMEBI · État récapitulatif TVA</div>
           <h1 className="a-h1">Vos déclarations d&apos;échanges intra-UE, gérées de A à Z.</h1>
           <p className="a-lead">
-            Conseil, établissement et transmission de votre EMEBI — à l&apos;Introduction comme à
-            l&apos;Expédition — et de votre état récapitulatif TVA. En toute conformité, sans y passer
+            Conseil, établissement et transmission de votre <strong>EMEBI</strong> — à l&apos;Introduction comme à
+            l&apos;Expédition — et de votre <strong>état récapitulatif TVA</strong>. En toute conformité, sans y passer
             vos journées.
           </p>
           <div className="a-herobtns">
@@ -69,10 +68,10 @@ export default function Home() {
             <div className="a-band-tag">Notre domaine d&apos;expertise</div>
             <h2 className="a-band-title">L&apos;EMEBI, anciennement DEB, sans le casse-tête.</h2>
             <p className="a-band-text">
-              Depuis janvier 2022, les modalités de déclaration des échanges de biens à l’introduction et à l’expédition au sein de l’Union européenne ont évolué.
-              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (EMEBI) a remplacé le volet statistique de la déclaration d’échanges de biens (DEB) pour les échanges intra-UE de marchandises.
+              Depuis janvier 2022, les modalités de déclaration des <strong>échanges de biens</strong> à l’introduction et à l’expédition au sein de l’Union européenne ont évolué.
+              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (<strong>EMEBI</strong>) a remplacé le volet statistique de la <strong>déclaration d’échanges de biens (DEB)</strong> — l’équivalent français de l’<strong>Intrastat</strong> — pour les échanges <strong>intra-UE</strong> de marchandises.
               Nous prenons en charge l&apos;intégralité
-              de la démarche pour que vous restiez concentré sur votre activité.
+              de la démarche, du volet statistique aux formalités <strong>douanières</strong>, pour que vous restiez concentré sur votre activité.
             </p>
           </div>
           <div className="a-flow">
