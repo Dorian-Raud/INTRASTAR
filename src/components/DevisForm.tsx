@@ -166,7 +166,11 @@ export default function DevisForm() {
             onChange={(e) => setConsent(e.target.checked)}
           />
           J&apos;accepte d&apos;être recontacté(e) au sujet de ma demande. Mes données ne sont
-          utilisées qu&apos;à cette fin.
+          utilisées qu&apos;à cette fin, conformément à notre{" "}
+          <a href="/politique-de-confidentialite" target="_blank" rel="noopener noreferrer">
+            politique de confidentialité
+          </a>
+          .
         </label>
         {error && <p className="a-formnote is-error">{error}</p>}
         <button type="submit" className="a-btn a-formbtn">

@@ -38,7 +38,15 @@ export default function Footer() {
       </div>
       <div className="a-foot-bottom">
         <span>© 2026 - Intrastar</span>
-        <span>Mentions légales · Confidentialité</span>
+        <span>
+          <Link href="/mentions-legales" className="a-foot-bottom-link">
+            Mentions légales
+          </Link>
+          {" · "}
+          <Link href="/politique-de-confidentialite" className="a-foot-bottom-link">
+            Confidentialité
+          </Link>
+        </span>
       </div>
     </footer>
   );
