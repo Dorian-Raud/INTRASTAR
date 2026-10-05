@@ -37,8 +37,7 @@ export default function MentionsLegales() {
               <li>Nom commercial : Intrastar</li>
               <li>Représentée par : Raud Dorian</li>
               <li>Siège social : 59, rue de Ponthieu, Bureau 326, 75008 Paris, France</li>
-              <li>SIREN / SIRET : en cours d&apos;attribution</li>
-              <li>Régime de TVA : en cours de définition</li>
+              <li>SIRET : 10889113600013</li>
               <li>
                 Email :{" "}
                 <a href="mailto:contact@intrastar.fr">contact@intrastar.fr</a>
