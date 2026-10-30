@@ -141,6 +141,7 @@ button {
 
 .a-brandname {
   width: 15rem;
+  height: auto;
 }
 
 .a-navlinks {
@@ -210,6 +211,7 @@ button {
 }
 
 .a-hero-img {
+  width: auto;
   height: 380px;
   border-radius: 16px;
 }
@@ -428,6 +430,7 @@ button {
 }
 
 .a-about-img {
+  width: auto;
   height: 340px;
   border-radius: 15px;
 }

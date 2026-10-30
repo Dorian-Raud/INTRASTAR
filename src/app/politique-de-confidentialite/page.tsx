@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import "../legal.css";
 
-export const metadata: Metadata = {
-  title: "Politique de confidentialité — Intrastar",
+export const metadata: Metadata = pageMetadata({
+  title: "Politique de confidentialité",
   description: "Comment Intrastar traite vos données personnelles : collecte, finalités, conservation, cookies et vos droits RGPD.",
-};
+  path: "/politique-de-confidentialite",
+});
 
 export default function Confidentialite() {
   return (

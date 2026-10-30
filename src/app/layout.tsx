@@ -18,44 +18,20 @@ export const metadata: Metadata = {
     template: "%s | Intrastar",
   },
   description: site.description,
-  keywords: [
-    "EMEBI",
-    "DEB",
-    "déclaration EMEBI",
-    "état récapitulatif TVA",
-    "échanges de biens intra-UE",
-    "Intrastat",
-    "douanes",
-    "déclaration d'échanges de biens",
-    "TVA intracommunautaire",
-    "externalisation déclaration douanière",
-  ],
   applicationName: site.name,
-  authors: [{ name: site.name }],
+  authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
-  alternates: {
-    canonical: "/",
-  },
+  // Pas de canonique ni d'og:url ici : ils seraient hérités par toutes les
+  // pages qui n'en déclarent pas, et les feraient pointer vers l'accueil.
+  // Chaque page les définit via pageMetadata() (src/lib/seo.ts).
   openGraph: {
     type: "website",
     locale: site.locale,
-    url: site.url,
     siteName: site.name,
-    title: "Intrastar — Déclaration EMEBI (ex-DEB) & état récapitulatif TVA",
-    description: site.description,
-    images: [
-      {
-        url: "/logo_long_intrastar.png",
-        alt: "Intrastar — déclaration EMEBI et état récapitulatif TVA",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Intrastar — Déclaration EMEBI (ex-DEB) & état récapitulatif TVA",
-    description: site.description,
-    images: ["/logo_long_intrastar.png"],
   },
   robots: {
     index: true,
@@ -68,30 +44,72 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  // Après création de la propriété dans Google Search Console (méthode
-  // "balise HTML"), colle ici le code de vérification :
-  // verification: { google: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx" },
+  formatDetection: { telephone: false, email: false, address: false },
+  // Propriété Search Console vérifiée par fichier HTML (public/google…html).
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: site.name,
-  description: site.description,
-  url: site.url,
-  email: site.email,
-  telephone: site.phone,
-  image: `${site.url}/logo_long_intrastar.png`,
-  areaServed: { "@type": "Country", name: "France" },
-  address: { "@type": "PostalAddress", addressCountry: "FR" },
-  priceRange: "€€",
-  knowsAbout: [
-    "Déclaration EMEBI",
-    "Déclaration d'échanges de biens (DEB)",
-    "État récapitulatif TVA",
-    "Échanges de biens intra-UE",
-    "Intrastat",
-    "Douanes",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      legalName: site.legalName,
+      description: site.description,
+      url: site.url,
+      logo: `${site.url}/logo_long_intrastar.png`,
+      image: `${site.url}/opengraph-image`,
+      email: site.email,
+      telephone: site.phone,
+      priceRange: "€€",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: site.address.street,
+        postalCode: site.address.postalCode,
+        addressLocality: site.address.locality,
+        addressCountry: site.address.country,
+      },
+      areaServed: { "@type": "Country", name: "France" },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        email: site.email,
+        telephone: site.phone,
+        areaServed: "FR",
+        availableLanguage: "French",
+      },
+      knowsAbout: [
+        "Déclaration EMEBI",
+        "Déclaration d'échanges de biens (DEB)",
+        "État récapitulatif TVA",
+        "Échanges de biens intra-UE",
+        "Intrastat",
+        "Douanes",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Services Intrastar",
+        itemListElement: [
+          "Déclaration EMEBI à l'Introduction",
+          "Déclaration EMEBI à l'Expédition",
+          "État récapitulatif TVA",
+          "Conseil en échanges de biens intra-UE",
+        ].map((name) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name, areaServed: "FR" },
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      description: site.description,
+      inLanguage: "fr-FR",
+      publisher: { "@id": `${site.url}/#organization` },
+    },
   ],
 };
 

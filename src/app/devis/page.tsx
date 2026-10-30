@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import DevisForm from "@/components/DevisForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Demander un devis EMEBI gratuit — réponse sous 48 h",
   description:
     "Recevez une estimation claire sous 48 heures pour l'externalisation de votre déclaration EMEBI et de votre état récapitulatif TVA. Sans engagement.",
-  alternates: { canonical: "/devis" },
-};
+  path: "/devis",
+});
 
 const steps = [
   {
@@ -57,7 +58,7 @@ export default function Devis() {
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">☎</div>
-              <a href="tel:0763727879">07 63 72 78 79</a>
+              <a href="tel:+33763727879">07 63 72 78 79</a>
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">⌖</div>

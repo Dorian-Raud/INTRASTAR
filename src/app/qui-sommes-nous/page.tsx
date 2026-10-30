@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { pageMetadata } from "@/lib/seo";
+import founderImg from "../../../public/DSCF0074.jpg";
 import { Users, ShieldCheck, Zap } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import StatsSection from "@/components/StatsSection";
 import CtaBand from "@/components/CtaBand";
 import "./qui-sommes-nous.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Qui sommes-nous — expert EMEBI & échanges intra-UE",
   description:
     "Intrastar, micro-entreprise spécialisée dans la déclaration EMEBI (ex-DEB) et l'état récapitulatif TVA. Plus de 5 ans d'expertise au service des PME, cabinets comptables et services logistiques.",
-  alternates: { canonical: "/qui-sommes-nous" },
-};
+  path: "/qui-sommes-nous",
+});
 
 const values = [
   {
@@ -58,10 +61,12 @@ export default function QuiSommesNous() {
             </p>
           </div>
           <div className="about-image">
-            <img
+            <Image
               className="portrait-about"
-              src="/DSCF0074.jpg"
-              alt="Photo du fondateur"
+              src={founderImg}
+              alt="Dorian Raud, fondateur d'Intrastar, expert en déclaration EMEBI"
+              sizes="(max-width: 980px) 300px, 360px"
+              placeholder="blur"
             />
           </div>
         </div>

@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import StatsSection from "@/components/StatsSection";
 import CtaBand from "@/components/CtaBand";
+import { pageMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
+import officeImg from "../../public/office.png";
+import aboutPortraitImg from "../../public/DSCF0082.jpg";
+import aboutLandscapeImg from "../../public/DSCF0118.jpg";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Intrastar — Déclaration EMEBI (ex-DEB) & état récapitulatif TVA",
+  description: site.description,
+  path: "/",
+  absoluteTitle: true,
+});
 
 const flows = [
   {
@@ -39,6 +53,14 @@ const services = [
 ];
 
 export default function Home() {
+  // Images optimisées (WebP/AVIF redimensionnées) avec bascule portrait sur mobile.
+  const alt = "Dorian Raud, fondateur d'Intrastar";
+  const {
+    props: { srcSet: aboutMobileSrcSet },
+  } = getImageProps({ src: aboutPortraitImg, alt, sizes: "(max-width: 980px) 400px" });
+  const aboutMobile = { srcSet: aboutMobileSrcSet };
+  const { props: aboutDesktop } = getImageProps({ src: aboutLandscapeImg, alt, sizes: "520px" });
+
   return (
     <>
       <section className="a-hero">
@@ -59,7 +81,15 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <img src="/office.png" alt="photo — équipe / bureau (4:3)" className="a-hero-img" />
+        <Image
+          src={officeImg}
+          alt="Bureau Intrastar, spécialiste de la déclaration EMEBI et de l'état récapitulatif TVA"
+          className="a-hero-img"
+          sizes="(max-width: 980px) 16px, 680px"
+          loading="eager"
+          fetchPriority="high"
+          placeholder="blur"
+        />
       </section>
 
       <section className="a-band">
@@ -120,13 +150,9 @@ export default function Home() {
         {/* Gestion adaptative de l'image (Desktop vs Mobile) */}
         <picture className="a-about-img-container">
           {/* Si l'écran fait 980px ou moins, on affiche l'image portrait */}
-          <source srcSet="/DSCF0082.jpg" media="(max-width: 980px)" />
+          <source {...aboutMobile} media="(max-width: 980px)" />
           {/* Par défaut (Desktop), on affiche l'image paysage originale */}
-          <img
-            src="/DSCF0118.jpg"
-            alt="Portrait - Qui sommes-nous"
-            className="a-about-img"
-          />
+          <img {...aboutDesktop} alt="Dorian Raud, fondateur d'Intrastar" className="a-about-img" />
         </picture>
 
         <div>

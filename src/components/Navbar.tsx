@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -19,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="a-nav" style={{ position: "relative" }}>
       <Link href="/"  onClick={() => setOpen(false)}>
-      <img className="a-brandname" src="/logo_long_intrastar.png" alt="logo-intrastar" />
+      <Image className="a-brandname" src="/logo_long_intrastar.png" alt="Intrastar" width={240} height={50} preload />
       </Link>
 
       <div className={`a-navlinks ${styles.desktopLinks}`}>

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import "../legal.css";
 
-export const metadata: Metadata = {
-  title: "Mentions légales — Intrastar",
+export const metadata: Metadata = pageMetadata({
+  title: "Mentions légales",
   description: "Mentions légales du site Intrastar : éditeur, hébergement, propriété intellectuelle et droit applicable.",
-};
+  path: "/mentions-legales",
+});
 
 export default function MentionsLegales() {
   return (
@@ -43,7 +45,7 @@ export default function MentionsLegales() {
                 <a href="mailto:contact@intrastar.fr">contact@intrastar.fr</a>
               </li>
               <li>
-                Téléphone : <a href="tel:0763727879">07 63 72 78 79</a>
+                Téléphone : <a href="tel:+33763727879">07 63 72 78 79</a>
               </li>
               <li>Directeur de la publication : le représentant légal d&apos;Intrastar</li>
             </ul>
@@ -93,7 +95,7 @@ export default function MentionsLegales() {
             <p className="legal-p">
               Pour toute question relative au site, vous pouvez nous contacter à l&apos;adresse{" "}
               <a href="mailto:contact@intrastar.fr">contact@intrastar.fr</a> ou par téléphone au{" "}
-              <a href="tel:0763727879">07 63 72 78 79</a>.
+              <a href="tel:+33763727879">07 63 72 78 79</a>.
             </p>
           </div>
         </div>

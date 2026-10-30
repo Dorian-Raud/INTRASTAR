@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="a-foot-top">
         <div>
           <div className="a-foot-brand">
-            <img className="a-brandname" src="/logo_long_intrastar.png" alt="logo-intrastar" />
+            <Image className="a-brandname" src="/logo_long_intrastar.png" alt="Intrastar" width={240} height={50} />
           </div>
           <p style={{ margin: 0, maxWidth: "24em" }}>
             Micro-entreprise spécialisée dans la déclaration EMEBI et les obligations fiscales liées
@@ -30,7 +31,7 @@ export default function Footer() {
           <a className="a-foot-link" href="mailto:contact@intrastar.fr">
             contact@intrastar.fr
           </a>
-          <a className="a-foot-link" href="tel:0763727879">
+          <a className="a-foot-link" href="tel:+33763727879">
             07 63 72 78 79
           </a>
           <span className="a-foot-link">France entière · à distance</span>
