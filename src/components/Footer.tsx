@@ -22,6 +22,9 @@ export default function Footer() {
           <Link href="/qui-sommes-nous" className="a-foot-link">
             Qui sommes-nous
           </Link>
+          <Link href="/faq" className="a-foot-link">
+            FAQ
+          </Link>
           <Link href="/devis" className="a-foot-link">
             Demander un devis
           </Link>

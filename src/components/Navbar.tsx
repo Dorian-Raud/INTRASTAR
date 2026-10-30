@@ -10,6 +10,7 @@ import styles from "./Navbar.module.css";
 const links = [
   { href: "/", label: "Accueil" },
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
+  { href: "/faq", label: "FAQ" },
   { href: "/devis", label: "Contact" },
 ];
 
