@@ -25,6 +25,9 @@ export default function Footer() {
           <Link href="/faq" className="a-foot-link">
             FAQ
           </Link>
+          <Link href="/calendrier-emebi" className="a-foot-link">
+            Calendrier EMEBI
+          </Link>
           <Link href="/devis" className="a-foot-link">
             Demander un devis
           </Link>

@@ -9,7 +9,7 @@ import "./faq.css";
 export const metadata: Metadata = pageMetadata({
   title: "FAQ EMEBI & état récapitulatif TVA : délais, sanctions",
   description:
-    "Qui doit déposer l'EMEBI ? Quelle différence avec l'état récapitulatif TVA ? Date limite, amende de 750 €, dépôt sur douane.gouv.fr : toutes les réponses sur les déclarations d'échanges intra-UE.",
+    "Qui doit répondre à l'EMEBI ? Quelle différence avec l'état récapitulatif TVA ? Date limite, sanctions, dépôt sur douane.gouv.fr : les réponses, d'après la notice officielle des douanes.",
   path: "/faq",
 });
 
@@ -19,6 +19,7 @@ type Faq = {
   a: string[];
 };
 
+// Réponses établies d'après la notice EMEBI des douanes (version du 19 décembre 2025).
 const groups: { title: string; items: Faq[] }[] = [
   {
     title: "Comprendre l'EMEBI",
@@ -26,22 +27,28 @@ const groups: { title: string; items: Faq[] }[] = [
       {
         q: "Qu'est-ce que l'EMEBI ?",
         a: [
-          "L'EMEBI (Enquête statistique Mensuelle sur les Échanges de Biens Intra-UE) a remplacé la partie statistique de l'ancienne DEB (déclaration d'échanges de biens). Elle recense les mouvements physiques de marchandises entre la France et les autres États membres de l'Union européenne.",
-          "La partie fiscale de l'ancienne DEB est devenue l'état récapitulatif TVA, une déclaration distincte.",
+          "L'EMEBI est l'enquête statistique mensuelle sur les échanges de biens intra-Union européenne. Depuis janvier 2022, elle remplace le volet statistique de l'ancienne DEB (déclaration d'échanges de biens) et recense les mouvements physiques de marchandises entre la France et les autres États membres.",
+          "Le volet fiscal de l'ancienne DEB est devenu l'état récapitulatif TVA, une déclaration distincte.",
         ],
       },
       {
-        q: "Qui doit déposer l'EMEBI ?",
+        q: "Qui doit répondre à l'EMEBI ?",
         a: [
-          "Il n'y a plus de seuil en France. Les entreprises sont choisies par les douanes pour faire partie d'un échantillon : si vous êtes sélectionné, vous devez déposer l'EMEBI chaque mois.",
-          "À l'expédition, même si vous n'êtes pas dans l'échantillon, la déclaration fiscale (état récapitulatif TVA) reste obligatoire pour vos livraisons de biens vers des entreprises d'autres États membres.",
+          "Il n'y a plus de seuil en France. Chaque année, les douanes définissent un échantillon d'entreprises : seules celles qui en font partie et qui ont reçu une lettre-avis par courrier doivent répondre à l'EMEBI, chaque mois.",
+          "À l'expédition, même si vous n'êtes pas dans l'échantillon, l'état récapitulatif TVA reste obligatoire pour vos livraisons de biens vers des entreprises d'autres États membres. Il se dépose spontanément, sans courrier préalable des douanes.",
         ],
       },
       {
         q: "Quelle différence entre l'EMEBI et l'état récapitulatif TVA ?",
         a: [
-          "L'EMEBI est une déclaration statistique : elle décrit le mouvement physique des marchandises. Elle est donc plus complète et plus précise, avec la nomenclature des produits, le poids et parfois les quantités.",
-          "L'état récapitulatif TVA est une déclaration fiscale : il suffit du montant hors taxes et du numéro de TVA intracommunautaire de votre client.",
+          "L'EMEBI est une enquête statistique : elle décrit le mouvement physique des marchandises. Elle est donc plus complète et plus précise, avec notamment la nomenclature des produits, le poids et parfois les quantités.",
+          "L'état récapitulatif TVA est une déclaration fiscale, transmise aux impôts pour le contrôle de la TVA intra-UE : il suffit du montant hors taxes, du régime et du numéro de TVA intracommunautaire de votre client.",
+        ],
+      },
+      {
+        q: "Je n'ai eu aucun échange ce mois-ci : dois-je quand même répondre ?",
+        a: [
+          "Oui. Si vous faites partie de l'échantillon, la réponse à l'EMEBI est obligatoire même sans aucun flux sur le mois : il faut alors déclarer un « mois sans réponse statistique » dans le service en ligne.",
         ],
       },
     ],
@@ -52,19 +59,20 @@ const groups: { title: string; items: Faq[] }[] = [
       {
         q: "Quelle est la date limite de dépôt ?",
         a: [
-          "Les déclarations doivent être déposées au plus tard le 10e jour ouvré du mois qui suit les opérations. Par exemple, les échanges réalisés en mars sont à déclarer avant le 10e jour ouvré d'avril.",
+          "La réponse doit être déposée entre le 1er et le 10e jour ouvrable du mois qui suit le mois de référence (les jours ouvrables vont du lundi au samedi, hors jours fériés). Elle ne peut pas être déposée avant le 1er du mois. Par exemple, pour mars 2026, la date limite était le 13 avril 2026.",
+          "Retrouvez toutes les dates dans notre calendrier EMEBI.",
         ],
       },
       {
-        q: "Quelle est la sanction en cas de déclaration manquante ?",
+        q: "Quelles sanctions en cas de retard ou d'oubli ?",
         a: [
-          "L'amende est de 750 € par déclaration manquante. Quelques mois oubliés peuvent donc vite coûter plus cher qu'une externalisation sur l'année.",
+          "Après des rappels puis une mise en demeure restés sans réponse, une amende administrative de 75 à 150 € peut être appliquée pour chaque mois non déclaré. Elle peut atteindre 2 250 € en cas de récidive, c'est-à-dire si l'entreprise a déjà été sanctionnée pour une enquête statistique obligatoire au cours des 3 années précédentes. Une omission ou une inexactitude peut aussi être sanctionnée.",
         ],
       },
       {
         q: "Où se fait le dépôt ?",
         a: [
-          "Le dépôt se fait en ligne sur le site des douanes, douane.gouv.fr, depuis l'espace professionnel (anciennement Prodouane). Quand vous externalisez, c'est Intrastar qui s'en charge.",
+          "Le dépôt se fait en ligne sur douane.gouv.fr, dans le service « Échanges intra-UE de biens » (DEBWEB2), avec le compte de l'entreprise sur le portail des douanes (anciennement Prodouane). Quand vous externalisez, c'est Intrastar qui s'en charge.",
         ],
       },
     ],
@@ -75,7 +83,13 @@ const groups: { title: string; items: Faq[] }[] = [
       {
         q: "Comment se passe l'externalisation de ma DEB / EMEBI ?",
         a: [
-          "C'est simple : vous nous envoyez vos factures ou vos tableaux, et nous nous occupons du reste — établissement des déclarations EMEBI et de l'état récapitulatif TVA, contrôle et transmission aux douanes dans les délais.",
+          "C'est simple : vous nous envoyez vos factures ou vos tableaux, et nous nous occupons du reste — établissement de la réponse à l'EMEBI et de l'état récapitulatif TVA, contrôle et transmission aux douanes dans les délais.",
+        ],
+      },
+      {
+        q: "Ai-je le droit de déléguer mes déclarations ?",
+        a: [
+          "Oui. La notice des douanes prévoit que l'entreprise peut confier sa réponse à un prestataire, appelé « tiers déclarant », à condition de le mandater expressément. Votre entreprise reste identifiée sur chaque déclaration et conserve sa responsabilité légale : c'est pourquoi nous contrôlons chaque déclaration avant transmission.",
         ],
       },
       {
@@ -108,16 +122,27 @@ const jsonLd = {
   ),
 };
 
-// Rend "douane.gouv.fr" cliquable dans les réponses.
+// Liens insérés dans les réponses : le texte reste brut pour le JSON-LD.
+const links: { text: string; href: string }[] = [
+  { text: "douane.gouv.fr", href: "https://www.douane.gouv.fr/service-en-ligne/echanges-intra-ue-de-biens-debweb2-ex-deb" },
+  { text: "calendrier EMEBI", href: "/calendrier-emebi" },
+];
+
 function renderParagraph(text: string) {
-  const [before, after] = text.split("douane.gouv.fr");
-  if (after === undefined) return text;
+  const link = links.find((l) => text.includes(l.text));
+  if (!link) return text;
+  const [before, after] = text.split(link.text);
+  const external = link.href.startsWith("http");
   return (
     <>
       {before}
-      <a href="https://www.douane.gouv.fr" target="_blank" rel="noopener noreferrer">
-        douane.gouv.fr
-      </a>
+      {external ? (
+        <a href={link.href} target="_blank" rel="noopener noreferrer">
+          {link.text}
+        </a>
+      ) : (
+        <Link href={link.href}>{link.text}</Link>
+      )}
       {after}
     </>
   );

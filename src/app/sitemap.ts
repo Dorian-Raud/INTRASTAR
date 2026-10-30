@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${site.url}/calendrier-emebi`,
+      lastModified: new Date("2026-10-30"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${site.url}/mentions-legales`,
       lastModified: new Date("2026-07-04"),
       changeFrequency: "yearly",
