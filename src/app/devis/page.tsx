@@ -32,6 +32,7 @@ export default function Devis() {
   return (
     <>
       <PageHero
+        breadcrumb={{ name: "Demande de devis", path: "/devis" }}
         eyebrow="Demande de devis"
         title="Recevez une estimation sous 48 heures."
         sub="Décrivez-nous vos flux intra-UE : nous revenons vers vous avec une proposition adaptée et sans engagement."

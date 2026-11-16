@@ -43,6 +43,7 @@ export default function CalendrierEmebi() {
   return (
     <>
       <PageHero
+        breadcrumb={{ name: "Calendrier EMEBI", path: "/calendrier-emebi" }}
         eyebrow="Calendrier EMEBI"
         title="Calendrier EMEBI 2027 : les dates limites de dépôt"
         sub="Mois par mois, les dates limites pour déposer votre réponse à l'EMEBI sur douane.gouv.fr."

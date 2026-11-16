@@ -37,6 +37,7 @@ export default function QuiSommesNous() {
   return (
     <>
       <PageHero
+        breadcrumb={{ name: "Qui sommes-nous", path: "/qui-sommes-nous" }}
         eyebrow="Qui sommes-nous"
         title="L'expertise des échanges intra-UE, à taille humaine."
         sub="Intrastar est dédié à la déclaration EMEBI et aux obligations fiscales associées, pensée pour les entreprises qui veulent déléguer en confiance."

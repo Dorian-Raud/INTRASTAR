@@ -62,6 +62,13 @@ const jsonLd = {
       image: `${site.url}/opengraph-image`,
       email: site.email,
       telephone: site.phone,
+      sameAs: site.sameAs,
+      founder: {
+        "@type": "Person",
+        name: site.founder.name,
+        jobTitle: site.founder.jobTitle,
+        sameAs: site.founder.sameAs,
+      },
       priceRange: "€€",
       address: {
         "@type": "PostalAddress",

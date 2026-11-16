@@ -173,6 +173,7 @@ export default function FaqPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
+        breadcrumb={{ name: "FAQ", path: "/faq" }}
         eyebrow="Questions fréquentes"
         title="EMEBI & état récapitulatif TVA : vos questions"
         sub="Obligations, délais, sanctions et externalisation : l'essentiel pour déclarer vos échanges de biens intra-UE sans erreur."

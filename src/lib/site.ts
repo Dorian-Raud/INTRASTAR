@@ -17,6 +17,19 @@ export const site = {
     country: "FR",
   },
   areaServed: "FR",
+  // Fondateur (JSON-LD founder). Profil personnel : rattaché à la personne, pas à l'entreprise.
+  founder: {
+    name: "Dorian Raud",
+    jobTitle: "Fondateur, expert en déclaration EMEBI",
+    sameAs: ["https://www.linkedin.com/in/dorian-raud-384734374/"],
+  },
+  // Profils externes de l'entreprise (JSON-LD sameAs).
+  sameAs: [
+    // Page LinkedIn entreprise (URL publique, pas celle du tableau de bord admin).
+    "https://www.linkedin.com/company/135675076/",
+    // Fiche Google Business (identifiant CID, stable contrairement aux URL de recherche).
+    "https://maps.google.com/?cid=511353669753611695",
+  ],
   locale: "fr_FR",
 } as const;
 

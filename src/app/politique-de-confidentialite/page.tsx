@@ -13,6 +13,7 @@ export default function Confidentialite() {
   return (
     <>
       <PageHero
+        breadcrumb={{ name: "Politique de confidentialité", path: "/politique-de-confidentialite" }}
         eyebrow="Vos données"
         title="Politique de confidentialité"
         sub="Cette page explique quelles données sont collectées sur ce site, pourquoi, et comment exercer vos droits, conformément au RGPD."
