@@ -27,8 +27,9 @@ export const site = {
   sameAs: [
     // Page LinkedIn entreprise (URL publique, pas celle du tableau de bord admin).
     "https://www.linkedin.com/company/135675076/",
-    // Fiche Google Business (identifiant CID, stable contrairement aux URL de recherche).
-    "https://maps.google.com/?cid=511353669753611695",
+    // Fiche Google Business : identifiant du Knowledge Graph (kgmid), obtenu via le
+    // lien "Partager le profil" (https://share.google/a87n9OnkSbxwOWliy).
+    "https://www.google.com/search?kgmid=/g/11z_687g60",
   ],
   locale: "fr_FR",
 } as const;
