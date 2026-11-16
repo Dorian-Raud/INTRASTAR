@@ -40,7 +40,7 @@ export default function Footer() {
           <a className="a-foot-link" href="tel:+33763727879">
             07 63 72 78 79
           </a>
-          <span className="a-foot-link">France entière · à distance</span>
+          <span className="a-foot-link">Basé à Paris · intervention dans toute la France</span>
         </div>
       </div>
       <div className="a-foot-bottom">

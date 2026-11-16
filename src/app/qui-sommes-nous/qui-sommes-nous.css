@@ -25,6 +25,9 @@
     line-height: 1.9;
     font-size: 1.08rem;
     color: #4b5563;
+    text-align: justify;
+    /* Coupures de mots pour éviter les grands trous entre les mots sur mobile. */
+    hyphens: auto;
 }
 
 .about-image {

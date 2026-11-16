@@ -48,7 +48,30 @@ const services = [
   {
     num: "03",
     title: "État récapitulatif TVA",
-    text: "Réponse à vos obligations fiscales sur les échanges de biens intra-UE, en cohérence avec votre EMEBI.",
+    text: "Établissement et dépôt de votre état récapitulatif TVA chaque mois, en cohérence avec votre EMEBI.",
+  },
+];
+
+const howSteps = [
+  {
+    num: "1",
+    title: "Vous envoyez vos factures",
+    text: "Chaque mois, vous nous transmettez par e-mail vos factures d'achats et de ventes intra-UE, ou un export de votre logiciel.",
+  },
+  {
+    num: "2",
+    title: "Nous contrôlons vos données",
+    text: "Numéros de TVA intracommunautaire, nomenclature des produits (NC8), poids, pays et régimes : chaque ligne est vérifiée.",
+  },
+  {
+    num: "3",
+    title: "Nous déposons sur Prodouane",
+    text: "Votre EMEBI et votre état récapitulatif TVA sont déposés sur le portail des douanes (ex-Prodouane, service DEBWEB2), avant la date limite.",
+  },
+  {
+    num: "4",
+    title: "Vous recevez vos justificatifs",
+    text: "L'état récapitulatif en PDF et l'accusé de dépôt des douanes vous sont envoyés, à conserver en cas de contrôle.",
   },
 ];
 
@@ -66,7 +89,7 @@ export default function Home() {
       <section className="a-hero">
         <div>
           <div className="a-eyebrow">EMEBI · État récapitulatif TVA</div>
-          <h1 className="a-h1">Vos déclarations d&apos;échanges intra-UE, gérées de A à Z.</h1>
+          <h1 className="a-h1">Déclaration EMEBI et état récapitulatif TVA, gérés de A à Z.</h1>
           <p className="a-lead">
             Conseil, établissement et transmission de votre <strong>EMEBI</strong> — à l&apos;Introduction comme à
             l&apos;Expédition — et de votre <strong>état récapitulatif TVA</strong>. En toute conformité, sans y passer
@@ -99,7 +122,7 @@ export default function Home() {
             <h2 className="a-band-title">L&apos;EMEBI, anciennement DEB, sans le casse-tête.</h2>
             <p className="a-band-text">
               Depuis janvier 2022, les modalités de déclaration des <strong>échanges de biens</strong> à l’introduction et à l’expédition au sein de l’Union européenne ont évolué.
-              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (<strong>EMEBI</strong>) a remplacé le volet statistique de la <strong>déclaration d’échanges de biens (DEB)</strong> — l’équivalent français de l’<strong>Intrastat</strong> — pour les échanges <strong>intra-UE</strong> de marchandises.
+              L’enquête mensuelle sur les échanges de biens intra-Union Européenne (<strong>EMEBI</strong>) a remplacé le volet statistique de la <strong>déclaration d’échanges de biens (DEB)</strong> — l’équivalent français de l’<strong>Intrastat</strong> — pour les échanges <strong>intra-UE</strong>{" "}de marchandises.
               Nous prenons en charge l&apos;intégralité
               de la démarche, du volet statistique aux formalités <strong>douanières</strong>, pour que vous restiez concentré sur votre activité.
             </p>
@@ -138,6 +161,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="a-sec" style={{ paddingTop: 0 }}>
+        <div className="a-sechead">
+          <div className="a-eyebrow2">Comment ça marche</div>
+          <h2 className="a-h2">Votre EMEBI déposée en 4 étapes, chaque mois</h2>
+          <p className="a-secsub">
+            Vous n&apos;avez plus à vous connecter au portail des douanes ni à surveiller le calendrier : nous
+            gérons la déclaration de bout en bout.
+          </p>
+        </div>
+        <ol className="a-cards a-cards-4">
+          {howSteps.map((step) => (
+            <li className="a-card" key={step.num}>
+              <div className="a-cardicon">{step.num}</div>
+              <h3 className="a-cardtitle">{step.title}</h3>
+              <p className="a-cardtext">{step.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       <StatsSection
         stats={[
           { num: "+5 ans", label: "d'expertise en déclarations d'échanges intra-UE" },
@@ -159,8 +202,9 @@ export default function Home() {
           <div className="a-eyebrow2">Qui sommes-nous</div>
           <h2 className="a-h2">Un interlocuteur unique, expert et réactif</h2>
           <p className="a-secsub">
-            Forte de plus de plus de cinq années d&apos;expérience dans la déclaration des échanges de biens,
-            notre micro-entreprise accompagne PME, services logistiques et cabinets comptables. Notre
+            Forte de plus de cinq années d&apos;expérience dans la déclaration des échanges de biens,
+            notre micro-entreprise basée à Paris accompagne PME, services logistiques et cabinets comptables
+            partout en France, entièrement à distance. Notre
             promesse : un suivi personnalisé, des délais courts et une conformité sans faille — à un
             tarif clair et maîtrisé.
           </p>

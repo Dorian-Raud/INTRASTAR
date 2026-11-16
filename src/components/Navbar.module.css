@@ -22,7 +22,8 @@
   box-shadow: 0 12px 24px rgba(20, 40, 36, 0.08);
 }
 
-@media (max-width: 680px) {
+/* 6 liens + bouton : la barre ne tient plus sur une ligne en dessous de ~1150px. */
+@media (max-width: 1150px) {
   :global(.a-nav) .desktopLinks {
     display: none;
   }

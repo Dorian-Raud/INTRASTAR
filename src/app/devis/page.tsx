@@ -62,7 +62,7 @@ export default function Devis() {
             </div>
             <div className="a-cc-row">
               <div className="a-cc-ic">⌖</div>
-              France entière · à distance
+              Basé à Paris · intervention dans toute la France
             </div>
           </div>
         </div>

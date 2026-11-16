@@ -11,7 +11,7 @@ import "./qui-sommes-nous.css";
 export const metadata: Metadata = pageMetadata({
   title: "Qui sommes-nous — expert EMEBI & échanges intra-UE",
   description:
-    "Intrastar, micro-entreprise spécialisée dans la déclaration EMEBI (ex-DEB) et l'état récapitulatif TVA. Plus de 5 ans d'expertise au service des PME, cabinets comptables et services logistiques.",
+    "Intrastar, micro-entreprise basée à Paris, experte de la déclaration EMEBI (ex-DEB) et de l'état récapitulatif TVA depuis plus de 5 ans. PME et cabinets comptables.",
   path: "/qui-sommes-nous",
 });
 
@@ -107,7 +107,7 @@ export default function QuiSommesNous() {
         stats={[
           { num: "+5 ans", label: "d'expertise dédiée aux échanges de biens intra-UE" },
           { num: "PME · ETI", label: "cabinets comptables et services logistiques accompagnés" },
-          { num: "France", label: "intervention à distance, sur tout le territoire" },
+          { num: "France", label: "basé à Paris, intervention à distance sur tout le territoire" },
         ]}
       />
 

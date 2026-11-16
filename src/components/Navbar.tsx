@@ -11,7 +11,8 @@ const links = [
   { href: "/", label: "Accueil" },
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
   { href: "/faq", label: "FAQ" },
-  { href: "/devis", label: "Contact" },
+  { href: "/calendrier-emebi", label: "Calendrier EMEBI" },
+  { href: "/devis", label: "Devis / Contact" },
 ];
 
 export default function Navbar() {

@@ -23,7 +23,7 @@ export default function MentionsLegales() {
           <p className="legal-updated">Dernière mise à jour : 4 juillet 2026</p>
 
           <div className="legal-note">
-            <strong>Immatriculation en cours.</strong> Intrastar est en cours
+            <strong>Immatriculation en cours.</strong>{" "}Intrastar est en cours
             d&apos;immatriculation auprès de l&apos;INSEE. Le numéro SIREN/SIRET et le régime de
             TVA applicable seront ajoutés à cette page dès leur attribution.
           </div>
